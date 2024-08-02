@@ -1,0 +1,10 @@
+# logging
+numpy
+opencv-python
+torch
+torchvision
+torchsummary
+tensorboardX
+tqdm
+einops
+pandas
