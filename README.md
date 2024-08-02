@@ -48,12 +48,25 @@ Requirements can installed by:
 pip install -r requirements.txt
 ```
 
-## Setup
-
-
 ## Checkpoints
 Please download checkpoints via this [link](https://drive.google.com/drive/folders/1SQ40NDDGQB4g-sk-uBcRcGnEKrUhQSDt?usp=drive_link).
-You need to download two models (DE.pt and IQA.pt) for each dataset and put them in the ‘ckpt’ folder.
+You need to download two models (DE.pt and IQA.pt) for each dataset and place them in the 'ckpt' folder.
+
+
+## Dataset
+Please download the [GFIQA](https://drive.google.com/drive/folders/1zdEL-DK0U4Xa0_ZF6S7rIHgyYxfA9BsM?usp=drive_link) and [CGFIQA](https://drive.google.com/drive/folders/1Fw8Yeoqrgqz3YlALWecpqP8vKZYuHPJl?usp=drive_link) datasets and place them in the './dataset/GFIQA' and './dataset/CGFIQA' respectviely.
+
+## Setup
+
+### Inference
+```
+python test.py --exp GFIQA
+```
+or
+```
+python test.py --exp CGFIQA
+```
+The predicted MOS score will be saved in './result' folder.
 
 ## Reference
 If you find this work useful, please consider citing us!
