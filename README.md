@@ -1,7 +1,7 @@
 # DSL-FIQA
 Official repository for DSL-FIQA: Assessing Facial Image Quality via Dual-Set Degradation Learning and Landmark-Guided Transformer (CVPR 2024)
 
-(The code will be released in July.)
+(The code will be released soon.)
 
 [Project Page](https://dsl-fiqa.github.io/) | [Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_DSL-FIQA_Assessing_Facial_Image_Quality_via_Dual-Set_Degradation_Learning_and_CVPR_2024_paper.pdf) | [Arxiv](https://arxiv.org/abs/2406.09622) | [Video](https://www.youtube.com/watch?v=7jDzj-CBvbQ) | [Dataset](https://drive.google.com/drive/folders/1Fw8Yeoqrgqz3YlALWecpqP8vKZYuHPJl?usp=drive_link)
 
