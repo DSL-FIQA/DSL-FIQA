@@ -1,11 +1,11 @@
 # DSL-FIQA
 Official repository for DSL-FIQA: Assessing Facial Image Quality via Dual-Set Degradation Learning and Landmark-Guided Transformer (CVPR 2024)
 
-(The code will be released soon.)
 
 [Project Page](https://dsl-fiqa.github.io/) | [Paper](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_DSL-FIQA_Assessing_Facial_Image_Quality_via_Dual-Set_Degradation_Learning_and_CVPR_2024_paper.pdf) | [Arxiv](https://arxiv.org/abs/2406.09622) | [Video](https://www.youtube.com/watch?v=7jDzj-CBvbQ) | [Dataset](https://drive.google.com/drive/folders/1Fw8Yeoqrgqz3YlALWecpqP8vKZYuHPJl?usp=drive_link)
 
 ## Updates
+- Sep 2024: ✨ The code of DSL-FIQA has been released. 
 - July 2024: ✨ CGFIQA-40k dataset has been released!
 - Feb 2024: ✨ DSL-FIQA was accepted into CVPR 2024!
 
@@ -50,15 +50,22 @@ pip install -r requirements.txt
 
 ## Checkpoints
 Please download checkpoints via this [link](https://drive.google.com/drive/folders/1SQ40NDDGQB4g-sk-uBcRcGnEKrUhQSDt?usp=drive_link).
-You need to download two models (DE.pt and IQA.pt) for each dataset and place them in the 'ckpt' folder.
+We provide models pretrained on three scenarios (i.e., GFIQA, CGFIQA and custom). You need to download two models (DE.pt and IQA.pt) for each scenario and place them in the 'ckpt' folder.
 
 
 ## Dataset
 Please download the [GFIQA](https://drive.google.com/drive/folders/1zdEL-DK0U4Xa0_ZF6S7rIHgyYxfA9BsM?usp=drive_link) and [CGFIQA](https://drive.google.com/drive/folders/1Fw8Yeoqrgqz3YlALWecpqP8vKZYuHPJl?usp=drive_link) datasets and place them in the './dataset/GFIQA' and './dataset/CGFIQA' respectviely.
 
-## Setup
+### Train
+```
+python train_iqa.py --dataset GFIQA
+```
+or 
+```
+python train_iqa.py --dataset CGFIQA
+```
 
-### Inference
+### Inference on Existing Datasets
 ```
 python test.py --exp GFIQA
 ```
@@ -66,7 +73,20 @@ or
 ```
 python test.py --exp CGFIQA
 ```
-The predicted MOS score will be saved in './result' folder.
+
+The predicted MOS score will be saved in './result/YOUR_EXP' folder.
+
+### Inference on Custom Data
+Please download the checkpoints trained for "custom" scenario and place your data in './dataset/custom/unprocess'.
+
+You need to predict the landmark information first and refer to the [tutorial]().
+
+After obtaining the landmark information, you need to run:
+```
+python test_custom.py
+```
+
+The predicted MOS score will be saved in './result/custom' folder.
 
 ## Reference
 If you find this work useful, please consider citing us!
