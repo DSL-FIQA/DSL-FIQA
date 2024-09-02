@@ -79,7 +79,7 @@ The predicted MOS score will be saved in `./result/YOUR_EXP` folder.
 ### Inference on Custom Data
 Please download the checkpoints trained for "custom" scenario and place your data in `./dataset/custom/unprocess`.
 
-You need to predict the landmark information first and refer to the [tutorial]().
+You need to predict the landmark information first and refer to the [tutorial](https://github.com/DSL-FIQA/DSL-FIQA/tree/main/landmark_detection).
 
 After obtaining the landmark information, you need to run:
 ```
