@@ -74,10 +74,10 @@ or
 python test.py --exp CGFIQA
 ```
 
-The predicted MOS score will be saved in './result/YOUR_EXP' folder.
+The predicted MOS score will be saved in `./result/YOUR_EXP` folder.
 
 ### Inference on Custom Data
-Please download the checkpoints trained for "custom" scenario and place your data in './dataset/custom/unprocess'.
+Please download the checkpoints trained for "custom" scenario and place your data in `./dataset/custom/unprocess`.
 
 You need to predict the landmark information first and refer to the [tutorial]().
 
@@ -86,7 +86,7 @@ After obtaining the landmark information, you need to run:
 python test_custom.py
 ```
 
-The predicted MOS score will be saved in './result/custom' folder.
+The predicted MOS score will be saved in `./result/custom` folder.
 
 ## Reference
 If you find this work useful, please consider citing us!
